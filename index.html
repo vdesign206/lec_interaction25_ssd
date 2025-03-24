@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            height: 2000px;
+        }
+        section{
+            width: 100%;
+            height: 100vh; /* section 높이가 100으로 각각 설정된다 */ 
+        }
+        .wrapper{
+            max-width: 1200px;
+            margin: auto;
+            padding-top: 88px;
+        }
+        h1{
+            color: skyblue;
+            font-size: 48px;
+        }
+        h2{
+            font-size: 32px;
+        }
+        
+        h3{
+            font-size: 24px;
+            font-weight: 300;
+        }
+        .btns{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .btns .container{
+            position: relative;
+            max-width:900px;
+            padding: 20px;
+            padding-top: 15px;
+            margin: auto;
+            background-color:#333;
+            border-radius: 10px;
+        }
+        .btns__menu{
+            justify-content: center;
+            display: flex;
+        }
+        .btns__menu .btn{
+            font-size: 16px;
+            font-weight: 600;
+            color: #202c9b;
+            width: 150px;
+            height: 40px;
+            border-radius: 6px;
+            margin: 4px;
+            background-color: #dff8ff;
+            cursor: pointer;
+        }
+        .btns__menu .btn:hover{
+            background: #fff;
+            border: 1px solid #fff; 
+        }
+        button{
+            background-color: transparent;
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <div class="container">
+            <div class="btns__menu">
+                <button class="btn home">Home</button>
+                <button class="btn about">About</button>
+                <button class="btn skills">Skills</button>
+                <button class="btn works">Works</button>
+                <button class="btn contact">Contact</button>
+            </div>
+        </div>
+    </div>
+    
+    <section id="home">
+        <div class="wrapper">
+            <h1>Home</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam. <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, unde?</h3>
+        </div>
+    </section>
+    <section id="about">
+        <div class="wrapper">
+            <h1>About</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam. <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, unde?</h3>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="wrapper">
+            <h1>Skills</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam. <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, unde?</h3>
+        </div>
+    </section>
+    <section id="works">
+        <div class="wrapper">
+            <h1>Works</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam. <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, unde?</h3>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="wrapper">
+            <h1>Contact</h1>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, quibusdam. <br>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, unde?</h3>
+        </div>
+    </section>
+    <script>
+        const btnHome = document.querySelector('.home') /* home이라는 이름의 변수를 가져온다 */
+        const sectionHome = document.querySelector('#home') /* home의 id 속성을 넣어서 #을 쓴다 */
+        btnHome.addEventListener('click', function() {
+        sectionHome.scrollIntoView({behavior:'smooth', block:'center'}); /* 중괄호 안의 것은 매계변수임. 변수값을 지정 */
+            /* 상단의 버튼을 눌렀을 때 body에 해당하는 section으로 이동해준다.  */
+            /* mdn element scroll 검색하고 예제에 있는 것을 긁어오는 것도 방법이다.  */
+        });
+    </script>
+</body>
+</html>
