@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const todos = ['우유구매', '메일확인하기', '필라테스수업']
+
+    for (const i in todos) {
+      console.log(`${Number(i)+1}번째 할 일:${todos[i]} i의 자료형은 ${typeof(i)}`);
+    }
+
+    for (const todo of todos) {
+      console.log(`오늘의 할 일:${todo}`)
+    }
+
+    for (let i = 1 ; i<6 ; i++) {
+      console.log(`${i}번째 반복입니다.`)
+    }
+
+  </script>
+  
+</body>
+</html>
