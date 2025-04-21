@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p class="star"></p>
+  <script>
+
+    let output3 = '';
+    for (let i=1; i<10;i++){
+      for(let j = 10; j>i; j--) {
+        output3 += "&nbsp;&nbsp;";
+      }
+      for(let k=0; k<2*i-1; k++){
+        output3 += '*'
+      }
+      output3 += '<br>'
+    }
+    for (let i=10; i>0;i--){
+      for(let j = 10; j>i; j--) {
+        output3 += "&nbsp;&nbsp;";
+      }
+      for(let k=0; k<2*i-1; k++){
+        output3 += '*'
+      }
+      output3 += '<br>'
+    }
+
+    console.log(output3);
+    const star = document.querySelector('.star');
+    star.innerHTML = output3;
+
+  </script>
+</body>
+</html>

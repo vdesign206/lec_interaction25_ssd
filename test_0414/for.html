@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let output = 0;
+    for (let i = 1 ; i<=100 ; i++) {
+      output = output + i;
+    }
+    console.log(`1~100까지 숫자를 모두 더하면 ${output}입니다.`)
+
+    const todos = ['우유구매', '업무메일확인하기', '필라테스수업']
+
+    for (let i = 0; i<todos.length; i++) {
+      console.log(`${i+1}번째 할 일 :  ${todos[i]}`)
+    }
+    
+    for (let i = todos.length-1; i > -1; i-- ) {
+      console.log(`${i+1}번째 할 일 :  ${todos[i]}`)
+    }
+
+    //  짝수만 더하기
+    let output2 = 0;
+    for( let i = 1; i <= 10; i++) {
+
+      if( i % 2 === 1) {
+        continue;
+      }
+      output2 += i;
+     
+    }
+    alert(output2);
+
+    // 오른쪽 피라미드
+    let output3 = '';
+    for (let i=1; i<10;i++){
+      for(let j =0; j<i; j++) {
+        output3 += '*'
+      }
+      output3 += '\n'
+    }
+    console.log(output3);
+    
+    let output4 = '';
+    for (let i = 1; i<15; i++){
+      for(let j=15; j>i; j--) {
+        output4 += ' ';
+      }
+      for (let k=0;k<2*i-1; k++){
+        output4 += '\n';
+      }
+    }
+    console.log(output4);
+
+  </script>
+</body>
+</html>
