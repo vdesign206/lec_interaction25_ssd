@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function isLeapYear(year = new Date().getFullYear()) {
+      console.log(`매개변수 year: ${year}`)
+      return (year % 4===0) && (year % 100 !== 0) || (year % 400 === 0)
+    } 
+    console.log(`올해는 윤년일까? === ${isLeapYear()}`)
+
+    function callThreeTimes(callback) {
+      for (let i = 0; i<3; i++) {
+        callback(i);
+      }
+    }
+
+    function print(i) {
+      console.log(`${i}번째 함수 호출`)
+    }
+
+    callThreeTimes(print);
+
+    const numbers = [273, 52, 103, 32, 57]
+
+    // numbers.forEach(function(value, index, array))
+    numbers.forEach(function(value, index, array){
+      console.log("값"+ value + "의 인덱스는" + index +"배열은" + array);
+    })
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_upward" />
+  <style>
+    body{
+      margin: 0;
+      height: 2000px;
+    }
+    section {
+      width: 100%;
+      height: 100vh;
+    }
+    .wrapper {
+      padding-top: 88px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      color: skyblue;
+      font-size: 48px;
+    }
+    h2 {
+      font-size: 32px;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 300;
+    }
+    .btns {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+    .btns .container {
+      position: relative;
+      max-width: 900px;
+      padding: 20px;
+      background-color: #333;
+      margin: auto;
+    }
+    .btns__menu {
+      display: flex;
+      justify-content: center;
+    }
+    .btns__menu .btn {
+      font-size: 16px;
+      font-weight: 600;
+      color: #193a40;
+      width: 150px;
+      height: 40px;
+      border-radius: 6px;
+      margin: 4px;
+      background-color: #9ad2d9;
+      cursor: pointer;
+    }
+    .btns__menu .btn:hover {
+      background-color: white;
+      border: 1px solid #fff;
+    }
+    button {
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      outline: none;
+    }
+
+    .arrow-up {
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      width: 70px;
+      height: 70px;
+      color: rgb(255, 255, 255);
+      background-color: rgb(33, 112, 231);
+      border-radius: 50%;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+    }
+    .arrow-up span {
+      line-height: 70px;
+      font-size: 50px;
+    }
+    .arrow-up.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="btns">
+    <div class="container">
+      <div class="btns__menu">
+        <button class="btn home">Home</button>
+        <button class="btn about">About</button>
+        <button class="btn skills">Skills</button>
+        <button class="btn works">Works</button>
+        <button class="btn contact">Contact</button>
+      </div>
+    </div>
+  </div>
+  <section id="home">
+    <div class="wrapper">
+      <h1>Home</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id possimus sequi architecto libero. Odio ipsa ullam nesciunt sunt quis. Non minus eaque, voluptate esse sint temporibus fuga saepe necessitatibus.</h3>
+
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrapper">
+      <h1>about</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id possimus sequi architecto libero. Odio ipsa ullam nesciunt sunt quis. Non minus eaque, voluptate esse sint temporibus fuga saepe necessitatibus.</h3>
+
+    </div>
+  </section>
+  <section id="skills">
+    <div class="wrapper">
+      <h1>skills</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id possimus sequi architecto libero. Odio ipsa ullam nesciunt sunt quis. Non minus eaque, voluptate esse sint temporibus fuga saepe necessitatibus.</h3>
+
+    </div>
+  </section>
+  <section id="works">
+    <div class="wrapper">
+      <h1>works</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id possimus sequi architecto libero. Odio ipsa ullam nesciunt sunt quis. Non minus eaque, voluptate esse sint temporibus fuga saepe necessitatibus.</h3>
+
+    </div>
+  </section>
+  <section id="contact">
+    <div class="wrapper">
+      <h1>contact</h1>
+      <h2>Lorem ipsum dolor sit amet.</h2>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id possimus sequi architecto libero. Odio ipsa ullam nesciunt sunt quis. Non minus eaque, voluptate esse sint temporibus fuga saepe necessitatibus.</h3>
+
+    </div>
+  </section>
+
+  <button class="arrow-up">
+    <span class="material-symbols-outlined">
+      arrow_upward
+      </span>
+
+  </button>
+
+  <script>
+    // const btnHome = document.querySelector('.home');
+    const sectionHome = document.querySelector('#home');
+    document.querySelector('.home').addEventListener('click', function() {
+      sectionHome.scrollIntoView({behavior:'smooth', block:'center'});
+    })
+    const btnAbout = document.querySelector('.about');
+    const sectionAbout = document.querySelector('#about');
+    btnAbout.addEventListener('click', function() {
+      sectionAbout.scrollIntoView({behavior:'smooth', block:'center'});
+    })
+    const btnSkills = document.querySelector('.skills');
+    const sectionSkills = document.querySelector('#skills');
+    btnSkills.addEventListener('click', function() {
+      sectionSkills.scrollIntoView({behavior:'smooth', block:'center'});
+    })
+    const btnWorks = document.querySelector('.works');
+    const sectionWorks = document.querySelector('#works');
+    btnWorks.addEventListener('click', function() {
+      sectionWorks.scrollIntoView({behavior:'smooth', block:'center'});
+    })
+    const btnContact = document.querySelector('.contact');
+    const sectionContact = document.querySelector('#contact');
+    btnContact.addEventListener('click', function() {
+      sectionContact.scrollIntoView({behavior:'smooth', block:'center'});
+    })
+    const arrowUp = document.querySelector('.arrow-up');
+    document.addEventListener('scroll', function() {
+
+      // console.log(window.scrollY);
+      if ( window.scrollY > 300) {
+        arrowUp.classList.add('visible');
+      } else {
+        arrowUp.classList.remove('visible');
+      }
+    })
+
+    const home = document.querySelector('#home');
+    arrowUp.addEventListener('click', function () {
+      home.scrollIntoView({behavior:"smooth"});
+    });
+
+  </script>
+</body>
+</html>

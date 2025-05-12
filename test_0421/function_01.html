@@ -8,18 +8,18 @@
 <body>
   <script>
     var a =20;
-    const 함수 = function() {
+    const 함수 = function(d) {
       var a = 10;
       console.log('함수 내부의 코드입니다_1');
       console.log('함수 내부의 코드입니다_2');
       console.log('함수 내부의 코드입니다_3');
-      console.log('');
+      console.log(d);
     }
     for (i=0; i<10; i++){
       var a = 10;
       console.log(a);
     }
-    함수();
+    함수(안녕하세요);
     함수();
 
     console.log(typeof 함수);
@@ -85,6 +85,8 @@ earnings('구름');
 earnings('별', 10000);
 //시급 1만원으로 52시간 일한 경우
 earnings('인성', 10000, 52);
+
+
 
   </script>
 </body>
